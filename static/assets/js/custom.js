@@ -230,28 +230,28 @@ $(function() {
     /*  AJAX CONTACT FORM
     /* ----------------------------------------------------------- */
 
-    $(".formcontact").on("submit", function() {
-        $(".output_message").text("Sending...");
-        var form = $(this);
-        $.ajax({
-            url: form.attr("action"),
-            method: form.attr("method"),
-            data: form.serialize(),
-            success: function(result) {
-                if (result  ==="success") {
-                    $(".contactform").find(".form-message").addClass("d-block");
-                    $(".contactform").find(".output_message").addClass("success");
-                    $(".output_message").html("Your Message has been Sent!");
-                    $(".formcontact")[0].reset();
-                } else {
-                    $(".contactform").find(".form-message").addClass("d-block");
-                    $(".contactform").find(".output_message").addClass("d-block error");
-                    $(".output_message").text("Error Sending!");
-                }
-            }
-        });
-        return false;
-    });
+    // $(".formcontact").on("submit", function() {
+    //     $(".output_message").text("Sending...");
+    //     var form = $(this);
+    //     $.ajax({
+    //         url: form.attr("action"),
+    //         method: form.attr("method"),
+    //         data: form.serialize(),
+    //         success: function(result) {
+    //             if (result  ==="success") {
+    //                 $(".contactform").find(".form-message").addClass("d-block");
+    //                 $(".contactform").find(".output_message").addClass("success");
+    //                 $(".output_message").html("Your Message has been Sent!");
+    //                 $(".formcontact")[0].reset();
+    //             } else {
+    //                 $(".contactform").find(".form-message").addClass("d-block");
+    //                 $(".contactform").find(".output_message").addClass("d-block error");
+    //                 $(".output_message").text("Error Sending!");
+    //             }
+    //         }
+    //     });
+    //     return false;
+    // });
 
     $(window).on("load", function() {
 
